@@ -11,8 +11,8 @@ body, html {
 }
 
 header {
-    background: #341197;
-    color: white;
+    background: #363537;
+    color: rgb(211, 194, 41);
     padding: 10px 0;
     text-align: center;
 }
@@ -27,9 +27,45 @@ h1 {
     display: inline; /* Permet au titre de s'aligner sur la même ligne que le logo */
 }
 
+h2 {
+    font-family: 'Roboto', sans-serif; /* Utilise la police Roboto */
+    font-size: 24px; /* Définit la taille de la police */
+    text-align: center;
+    color: rgb(211, 194, 41); /* Définit la couleur du texte */
+    font-weight: 700; /* Rend le texte en gras */
+    text-transform: uppercase; /* Transforme le texte en majuscules */
+    letter-spacing: 1.5px; /* Augmente l'espacement entre les lettres */
+}
+
+
+.agency-description {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Couleur de fond légère pour distinguer la section */
+    border-radius: 5px; /* Bords arrondis pour un aspect plus doux */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre légère pour un effet de profondeur */
+}
+
+.agency-description h3 {
+    color: #333; /* Couleur de texte foncée pour le titre */
+}
+
+.agency-description p {
+    color: #666; /* Couleur de texte plus claire pour le paragraphe */
+    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+}
+
+.carousel {
+    margin-top: 50px; /* Ajoute un espace au-dessus du carrousel */
+    margin-bottom: 50px; /* Ajoute un espace en dessous du carrousel */
+    margin-left: 250px;
+    /* Ou vous pouvez utiliser le positionnement pour le placer précisément */
+    position: relative; /* ou 'absolute' selon le besoin */
+}
+
 nav ul {
     list-style: none;
-    background: #341197;
+    background: #363537;
     text-align: center;
     padding: 0;
 }
@@ -40,7 +76,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(211, 194, 41);
     padding: 10px 20px;
     display: inline-block;
 }
@@ -48,14 +84,14 @@ nav ul li a {
 section {
     margin: 20px 0;
     padding: 20px;
-    background: #E0F2F1;
+    background: #6b6d6d;
 }
 
 footer {
-    background: #341197;
-    color: white;
+    background: #363537;
+    color: rgb(211, 194, 41);
     text-align: center;
-    padding: 10px 0;
+    padding: 10px ;
     position: absolute;
     width: 100%;
     bottom: 10;
