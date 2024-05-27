@@ -93,7 +93,29 @@ footer {
     text-align: center;
     padding: 10px ;
     position: absolute;
-    width: 100%;
+    width: 69%;
     bottom: 10;
 }
 
+@media (min-width: 1200px) {
+    #wrapper {
+        width: 70%;
+    }
+    body {
+        font-size: 16px;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #363537; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    text-decoration: none; /* Aucun soulignement de texte */
+    border-radius: 5px; /* Bords arrondis du bouton */
+}
+
+.button:hover {
+    background-color: #4a4a4a; /* Changement de couleur au survol */
+}
