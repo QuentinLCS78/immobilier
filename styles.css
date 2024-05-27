@@ -17,6 +17,16 @@ header {
     text-align: center;
 }
 
+#logo {
+    height: 50px; /* Ajustez la hauteur selon vos besoins */
+    vertical-align: middle; /* Alignement vertical avec le texte */
+    margin-right: 10px; /* Espacement entre le logo et le titre */
+}
+
+h1 {
+    display: inline; /* Permet au titre de s'aligner sur la même ligne que le logo */
+}
+
 nav ul {
     list-style: none;
     background: #00695C;
@@ -50,3 +60,4 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
