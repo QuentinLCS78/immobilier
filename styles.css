@@ -93,7 +93,7 @@ h2 {
 .carousel {
     margin-top: 50px; /* Ajoute un espace au-dessus du carrousel */
     margin-bottom: 50px; /* Ajoute un espace en dessous du carrousel */
-    margin-left: 600px; /* Ou vous pouvez utiliser le positionnement pour le placer précisément */
+    margin-left: 180px; /* Ou vous pouvez utiliser le positionnement pour le placer précisément */
     position: relative; /* ou 'absolute' selon le besoin */
 }
 
