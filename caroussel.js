@@ -9,6 +9,7 @@ function moveSlide(n) {
     showSlides(slideIndex += n);
 }
 
+
 function showSlides(n) {
     let slides = document.getElementsByClassName("slides")[0].getElementsByTagName("img");
     if (n >= slides.length) slideIndex = 0;

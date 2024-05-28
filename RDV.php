@@ -1,3 +1,4 @@
+
 <?php
 include 'database.php'; // Inclure les détails de connexion à la base de données
 
