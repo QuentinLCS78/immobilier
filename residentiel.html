@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Immobilier Résidentiel - Omnes Immobilier</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+</head>   
 <body>
     <div id="wrapper">
         <header>
@@ -17,7 +17,7 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="parcourir.html">Tout Parcourir</a></li>
                 <li><a href="recherche.html">Recherche</a></li>
-                <li><a href="rendezvous.html">Rendez-vous</a></li>
+                <li><a href="RDV.php">Rendez-vous</a></li>
                 <li><a href="compte.html">Votre Compte</a></li>
             </ul>
         </nav>
@@ -25,32 +25,39 @@
             <h2>Immobilier Résidentiel</h2>
             <p>Explorez notre large gamme de propriétés résidentielles, des maisons unifamiliales aux complexes de condos et duplex. Chaque propriété est conçue pour offrir confort, sécurité et style. Que vous cherchiez à acheter ou à louer, nous avons quelque chose qui répondra à vos besoins et préférences.</p>
             <div>
-                <!-- Ici, vous pouvez ajouter des images, des listes de propriétés, des liens vers des visites virtuelles, etc. -->
                 <div class="property-card">
-                <a href="images/photo4.jpg"><img src="images/photo4.jpg" alt="appartement2chambres" style="width:100%;max-width:300px;"></a>
-                <div class="property-description">
-                <p>Situé en plein coeur du centre-ville, cet appartement de 75 m² offre un salon spacieux avec cuisine ouverte, deux chambres avec placards intégrés, et une salle de bain moderne. Parfait pour jeunes professionnels ou petite famille.</p>
-                </div>
-                </div>
-                <div class="property-card">
-                <a href="images/photo3.jpg"><img src="images/photo3.jpg" alt="maisoncampagne" style="width:100%;max-width:300px;"></a>
-                <div class="property-description">
-                <p>Charmante maison de 120 m² sur un terrain de 2000 m². Comprend trois chambres, deux salles de bain, un grand salon avec cheminée, et une cuisine équipée. Idéale pour les amoureux de la nature et de tranquillité.</p>
-                </div>
+                    <img src="images/photo4.jpg" alt="appartement2chambres" style="width:100%;max-width:300px;">
+                    <div class="property-description">
+                        <p>Situé en plein coeur du centre-ville, cet appartement de 75 m² offre un salon spacieux avec cuisine ouverte, deux chambres avec placards intégrés, et une salle de bain moderne. Parfait pour jeunes professionnels ou petite famille.</p>
+                        <button onclick="location.href='rendezvous.php?category=2'">Prendre rendez-vous</button>
+
+                    </div>
                 </div>
                 <div class="property-card">
-                <a href="images/photo2.jpg"><img src="images/photo2.jpg" alt="villapiscine" style="width:100%;max-width:300px;"></a>
-                <div class="property-description">
-                <p>Magnifique villa de 250 m² dans un quartier résidentiel prisé. Comprend quatre chambres, trois salles de bain, un vaste séjour ouvrant sur une terrasse et une piscine chauffée. Parfaite pour une famille recherchant confort et élégance.</p>
-                </div>
+                    <img src="images/photo3.jpg" alt="maisoncampagne" style="width:100%;max-width:300px;">
+                    <div class="property-description">
+                        <p>Charmante maison de 120 m² sur un terrain de 2000 m². Comprend trois chambres, deux salles de bain, un grand salon avec cheminée, et une cuisine équipée. Idéale pour les amoureux de la nature et de tranquillité.</p>
+                        <button onclick="location.href='rendezvous.php?category=1'">Prendre rendez-vous</button>
+
+                    </div>
                 </div>
                 <div class="property-card">
-                <img src="images/photo5.jpg" alt="appartementvide" style="width:100%;max-width:300px;">
-                <div class="property-description"></div>
-                <p> Duplex de 90 m² offrant un espace de vie ouvert et lumineux, deux chambres, deux salles de bain et une grande terrasse avec vue panoramique. Situé dans un quartier dynamique, proche de toutes commodités.</p>
+                    <img src="images/photo2.jpg" alt="villapiscine" style="width:100%;max-width:300px;">
+                    <div class="property-description">
+                        <p>Magnifique villa de 250 m² dans un quartier résidentiel prisé. Comprend quatre chambres, trois salles de bain, un vaste séjour ouvrant sur une terrasse et une piscine chauffée. Parfaite pour une famille recherchant confort et élégance.</p>
+                        <button onclick="location.href='rendezvous.php?category=2'">Prendre rendez-vous</button>
+
+                    </div>
                 </div>
-                </div>    
-            
+                <div class="property-card">
+                    <img src="images/photo5.jpg" alt="appartementvide" style="width:100%;max-width:300px;">
+                    <div class="property-description">
+                        <p>Duplex de 90 m² offrant un espace de vie ouvert et lumineux, deux chambres, deux salles de bain et une grande terrasse avec vue panoramique. Situé dans un quartier dynamique, proche de toutes commodités.</p>
+                        <button onclick="location.href='rendezvous.php?category=2'">Prendre rendez-vous</button>
+
+                    </div>
+                </div>
+            </div>
         </section>
         <footer>
             <p>© 2024 Omnes Immobilier. Tous droits réservés.</p>

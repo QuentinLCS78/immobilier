@@ -1,4 +1,46 @@
-<form action="search_results.php" method="GET">
-    <input type="text" name="search_query" placeholder="Rechercher un agent ou une propriété...">
-    <input type="submit" value="Rechercher">
-</form>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche - Omnes Immobilier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <div id="wrapper">
+        <header>
+            <img src="images/logo.png" alt="Logo Omnes Immobilier" id="logo">
+            <h1>Omnes Immobilier</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcourir.html">Tout Parcourir</a></li>
+                <li><a href="recherche.html">Recherche</a></li>
+                <li><a href="RDV.php">Rendez-vous</a></li>
+                <li><a href="compte.html">Votre Compte</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Recherche de propriétés</h2>
+            <form id="searchForm">
+                <input type="text" placeholder="Entrer un mot-clé..." class="form-control">
+                <button type="submit" class="button">Rechercher</button>
+            </form>
+            <div id="searchResults" class="property-card"></div>
+        </section>
+        <footer>
+            <p>© 2024 Omnes Immobilier. Tous droits réservés.</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $('#searchForm').on('submit', function(event) {
+            event.preventDefault();
+            let keyword = $('input[type="text"]').val();
+            $('#searchResults').html('<p>Recherche en cours pour "' + keyword + '"...</p>');
+            // Ajouter ici l'appel AJAX pour récupérer les résultats de recherche
+        });
+    </script>
+</body>
+</html>

@@ -2,12 +2,15 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #wrapper {
     width: 90%;
     margin: auto;
-    overflow: hidden;
+    flex: 1; /* Permettre au wrapper de prendre l'espace restant */
 }
 
 header {
@@ -90,7 +93,6 @@ h2 {
     line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
 }
 
-
 .carousel {
     margin-top: 50px; /* Ajoute un espace au-dessus du carrousel */
     margin-bottom: 50px; /* Ajoute un espace en dessous du carrousel */
@@ -120,16 +122,15 @@ section {
     margin: 20px 0;
     padding: 20px;
     background: #6b6d6d;
+    flex: 1; /* Permet à la section de prendre l'espace restant */
 }
 
 footer {
     background: #363537;
     color: rgb(211, 194, 41);
     text-align: center;
-    padding: 10px ;
-    position: absolute;
-    width: 69%;
-    bottom: 10;
+    padding: 10px;
+    margin-top: auto; /* Pousser le footer vers le bas */
 }
 
 @media (min-width: 1200px) {
@@ -149,6 +150,8 @@ footer {
     color: white; /* Couleur du texte */
     text-decoration: none; /* Aucun soulignement de texte */
     border-radius: 5px; /* Bords arrondis du bouton */
+    cursor: pointer; /* Change le curseur en pointeur */
+    border: none; /* Aucune bordure */
 }
 
 .button:hover {
@@ -225,3 +228,45 @@ footer {
     }
 }
 
+/* Styles pour la page rendezvous.php */
+.agent-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.agent-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.agent-card p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.agent-card h3 {
+    color: rgb(211, 194, 41);
+}
+   
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #363537; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    text-decoration: none; /* Aucun soulignement de texte */
+    border-radius: 5px; /* Bords arrondis du bouton */
+    cursor: pointer; /* Change le curseur en pointeur */
+    border: none; /* Aucune bordure */
+}
+
+.button:hover {
+    background-color: #4a4a4a; /* Changement de couleur au survol */
+}

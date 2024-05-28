@@ -2,7 +2,7 @@ form {
     margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
-}
+}    
 
 input[type="text"], input[type="date"], input[type="time"], select {
     margin: 10px 0;
