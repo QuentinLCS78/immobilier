@@ -1,44 +1,24 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Connexion à la base de données
+// search_results.php
 include 'database.php';
 
-$search_query = $_GET['search_query'] ?? '';
 
-if (!empty($search_query)) {
-    $query = "SELECT * FROM properties WHERE name LIKE CONCAT('%', ?, '%') OR address LIKE CONCAT('%', ?, '%')";
-    $stmt = $conn->prepare($query);
+$search_query = $_GET['search_query'];
 
-    if ($stmt === false) {
-        die("Erreur de préparation de la requête : " . $conn->error);
+$query = "SELECT * FROM properties WHERE name LIKE ? OR address LIKE ?";
+$stmt = $conn->prepare($query);
+$search_term = "%" . $search_query . "%";
+$stmt->bind_param("ss", $search_term, $search_term);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo "<p>" . $row['name'] . " - " . $row['address'] . "</p>";
     }
-
-    $stmt->bind_param("ss", $search_query, $search_query);
-
-    if ($stmt->execute() === false) {
-        die("Erreur d'exécution de la requête : " . $stmt->error);
-    }
-
-    $result = $stmt->get_result();
-
-    if ($result === false) {
-        die("Erreur de récupération des résultats : " . $stmt->error);
-    }
-
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo "<p>" . htmlspecialchars($row['name']) . " - " . htmlspecialchars($row['address']) . "</p>";
-        }
-    } else {
-        echo "Aucun résultat trouvé pour '" . htmlspecialchars($search_query) . "'.";
-    }
-
-    $stmt->close();
 } else {
-    echo "Veuillez entrer un terme de recherche.";
+    echo "Aucun résultat trouvé.";
 }
-
+$stmt->close();
 $conn->close();
 ?>
