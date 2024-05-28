@@ -1,12 +1,59 @@
-<!-- Formulaire de prise de rendez-vous -->
-<form action="submit_appointment.php" method="POST">
-    <label for="agent_id">Choisissez un agent:</label>
-    <select name="agent_id" required>
-        <!-- Les options seront générées par PHP en interrogeant la base de données -->
-    </select>
-    <label for="date">Date:</label>
-    <input type="date" name="date" required>
-    <label for="time">Heure:</label>
-    <input type="time" name="time" required>
-    <input type="submit" value="Prendre RDV">
-</form>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prendre un Rendez-vous - Omnes Immobilier</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="rdv.js" defer></script> <!-- Assurez-vous que le script est chargé correctement -->
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="images/logo.png" alt="Logo Omnes Immobilier" id="logo">
+            <h1>Omnes Immobilier - Prendre un Rendez-vous</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcourir.html">Tout Parcourir</a></li>
+                <li><a href="recherche.html">Recherche</a></li>
+                <li><a href="rdv.html">Rendez-vous</a></li>
+                <li><a href="compte.html">Votre Compte</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="appointments">
+                <h2>Prendre un Rendez-vous</h2>
+                <form action="submit_appointment.php" method="POST">
+                    <label for="agent_id">Choisissez un agent:</label>
+                    <select name="agent_id" id="agent_id" required>
+                        <?php
+                        include 'database.php';
+                        $query = "SELECT agent_id, name FROM agents";
+                        $result = $conn->query($query);
+
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<option value='" . htmlspecialchars($row['agent_id']) . "'>" . htmlspecialchars($row['name']) . "</option>";
+                            }
+                        } else {
+                            echo "<option value=''>Aucun agent disponible</option>";
+                        }
+                        $conn->close();
+                        ?>
+                    </select>
+                    <label for="date">Date:</label>
+                    <input type="date" name="date" id="date" required>
+                    <label for="time">Heure:</label>
+                    <input type="time" name="time" id="time" required>
+                    <input type="submit" value="Prendre RDV">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 Omnes Immobilier. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

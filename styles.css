@@ -2,99 +2,20 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Ajouter une couleur de fond douce */
 }
 
 #wrapper {
-    width: 90%;
-    margin: auto;
+    max-width: 1200px; /* Largeur maximale pour une meilleure gestion de l'espace */
+    margin: auto; /* Centrage automatique dans la page */
     overflow: hidden;
 }
 
 header {
     background: #363537;
-    color: rgb(211, 194, 41);
+    color: #D3C229;
     padding: 10px 0;
     text-align: center;
-}
-
-.prev {
-    background-color: rgb(211, 194, 41); /* Couleur de fond verte */
-    color: black; /* Couleur du texte */
-    padding: 10px 20px; /* Padding autour du texte */
-    text-align: center; /* Centrage du texte */
-    text-decoration: none; /* Aucun soulignement */
-    display: inline-block; /* Rend le lien comme un bloc inline */
-    font-size: 16px; /* Taille de la police */
-    margin: 4px 2px; /* Marge autour du bouton */
-    cursor: pointer; /* Change le curseur en pointeur */
-    border: none; /* Aucune bordure */
-    border-radius: 4px; /* Bords arrondis */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Transition pour l'effet de survol */
-}
-
-.next {
-    background-color: rgb(211, 194, 41); /* Couleur de fond verte */
-    color: black; /* Couleur du texte */
-    padding: 10px 20px; /* Padding autour du texte */
-    text-align: center; /* Centrage du texte */
-    text-decoration: none; /* Aucun soulignement */
-    display: inline-block; /* Rend le lien comme un bloc inline */
-    font-size: 16px; /* Taille de la police */
-    margin: 4px 2px; /* Marge autour du bouton */
-    cursor: pointer; /* Change le curseur en pointeur */
-    border: none; /* Aucune bordure */
-    border-radius: 4px; /* Bords arrondis */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Transition pour l'effet de survol */
-}
-
-#logo {
-    height: 50px; /* Ajustez la hauteur selon vos besoins */
-    vertical-align: middle; /* Alignement vertical avec le texte */
-    margin-right: 10px; /* Espacement entre le logo et le titre */
-}
-
-h1 {
-    display: inline; /* Permet au titre de s'aligner sur la même ligne que le logo */
-}
-
-h2 {
-    font-family: 'Roboto', sans-serif; /* Utilise la police Roboto */
-    font-size: 24px; /* Définit la taille de la police */
-    text-align: center;
-    color: rgb(211, 194, 41); /* Définit la couleur du texte */
-    font-weight: 700; /* Rend le texte en gras */
-    text-transform: uppercase; /* Transforme le texte en majuscules */
-    letter-spacing: 1.5px; /* Augmente l'espacement entre les lettres */
-}
-
-.category h3 {
-    font-family: 'Arial', sans-serif; /* Change la police */
-    color: rgb(211, 194, 41); /* Change la couleur du texte */
-    padding: 10px 0; /* Ajoute du padding au-dessus et en dessous */ 
-}
-
-.agency-description {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f9f9f9; /* Couleur de fond légère pour distinguer la section */
-    border-radius: 5px; /* Bords arrondis pour un aspect plus doux */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre légère pour un effet de profondeur */
-}
-
-.agency-description h3 {
-    color: #333; /* Couleur de texte foncée pour le titre */
-}
-
-.agency-description p {
-    color: #666; /* Couleur de texte plus claire pour le paragraphe */
-    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
-}
-
-.carousel {
-    margin-top: 50px; /* Ajoute un espace au-dessus du carrousel */
-    margin-bottom: 50px; /* Ajoute un espace en dessous du carrousel */
-    margin-left: 180px; /* Ou vous pouvez utiliser le positionnement pour le placer précisément */
-    position: relative; /* ou 'absolute' selon le besoin */
 }
 
 nav ul {
@@ -102,6 +23,7 @@ nav ul {
     background: #363537;
     text-align: center;
     padding: 0;
+    margin: 0; /* Retirer la marge par défaut */
 }
 
 nav ul li {
@@ -110,117 +32,111 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(211, 194, 41);
+    color: #D3C229;
     padding: 10px 20px;
     display: inline-block;
 }
 
-section {
-    margin: 20px 0;
-    padding: 20px;
-    background: #6b6d6d;
+main {
+    padding: 20px; /* Ajouter du padding pour espacer le contenu */
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%; /* Utilise toute la largeur pour le centrage */
+    margin: auto; /* Centre le carrousel horizontalement */
+}
+
+.carousel .slides img {
+    width: 100%; /* Assure que l'image utilise toute la largeur du conteneur */
+    height: auto; /* Maintient le ratio de l'image */
+    display: block; /* Chaque image occupe sa propre ligne */
+    margin: auto; /* Centrage de l'image */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%; /* Positionne les flèches à la moitié de la hauteur du carrousel */
+    transform: translateY(-50%); /* Décale les flèches de 50% de leur hauteur pour un centrage vertical */
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    z-index: 10; /* S'assure que les flèches sont au-dessus des images */
+}
+
+.prev {
+    left: 10px; /* Positionne la flèche gauche à 10px du bord gauche */
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 10px; /* Positionne la flèche droite à 10px du bord droit */
+    border-radius: 0 3px 3px 0;
 }
 
 footer {
     background: #363537;
-    color: rgb(211, 194, 41);
+    color: #D3C229;
     text-align: center;
-    padding: 10px ;
-    position: absolute;
-    width: 69%;
-    bottom: 10;
+    padding: 10px 0;
+    width: 100%;
+    position: relative; /* Assurez-vous que le pied de page est toujours en bas */
+    bottom: 0;
 }
 
-@media (min-width: 1200px) {
-    #wrapper {
-        width: 70%;
-    }
-    body {
-        font-size: 16px;
+@media (min-width: 768px) {
+    .carousel .slides img {
+        width: 50%; /* Taille des images ajustée pour les écrans plus larges */
     }
 }
 
-.button {
-    display: inline-block;
+/* Styles pour le formulaire de rendez-vous */
+form {
+    max-width: 600px; /* Largeur maximale pour le formulaire */
+    margin: 20px auto; /* Centrer le formulaire horizontalement */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajouter une ombre pour l'effet de profondeur */
+    text-align: left; /* Aligner le texte à gauche pour une meilleure lisibilité */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="date"], input[type="time"], select {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
     padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
     margin-top: 10px;
-    background-color: #363537; /* Couleur de fond du bouton */
-    color: white; /* Couleur du texte */
-    text-decoration: none; /* Aucun soulignement de texte */
-    border-radius: 5px; /* Bords arrondis du bouton */
 }
 
-.button:hover {
-    background-color: #4a4a4a; /* Changement de couleur au survol */
+input[type="submit"]:hover {
+    background-color: #45a049;
 }
 
-.property-card {
-    display: flex; /* Active Flexbox sur le conteneur */
-    align-items: center; /* Centre les éléments verticalement */
-    background-color: #f4f4f4; /* Couleur de fond pour le cadre */
-    padding: 20px; /* Espacement à l'intérieur du cadre */
-    border-radius: 8px; /* Bords arrondis pour le cadre */
-    margin: 20px 0; /* Espacement autour du cadre */
+h2 {
+    text-align: center;
+    color: #363537;
+    margin-bottom: 20px;
 }
-
-.property-card img {
-    flex-shrink: 0; /* Empêche l'image de se réduire */
-    width: 40%; /* Largeur de l'image */
-    height: auto; /* Hauteur auto pour maintenir le ratio */
-    margin-right: 20px; /* Espacement entre l'image et le texte */
-}
-
-.property-description {
-    flex: 1; /* Prend le reste de l'espace disponible */
-    text-align: left; /* Alignement du texte à gauche */
-}
-
-@media (max-width: 768px) {
-    .property-card {
-        flex-direction: column; /* Empile les éléments verticalement sur petits écrans */
-        align-items: flex-start; /* Alignement au début */
-    }
-
-    .property-card img {
-        width: 100%; /* L'image prend toute la largeur */
-        margin-right: 0; /* Pas d'espacement à droite sur petits écrans */
-        margin-bottom: 10px; /* Espacement entre l'image et le texte */
-    }
-}
-
-.content-container {
-    display: flex;
-    align-items: flex-start; /* Aligner les éléments en haut */
-    justify-content: space-between; /* Espacement entre les éléments */
-    padding: 20px; /* Espacement autour des contenus */
-}
-
-.carousel-container, .event-week {
-    flex: 1; /* Chaque conteneur prendra une part égale de l'espace */
-    margin: 10px; /* Espacement entre les conteneurs */
-}
-
-.event-week {
-    background-color: #f8f9fa; /* Couleur de fond légère pour la section des événements */
-    padding: 20px; /* Padding interne pour la section des événements */
-    border-radius: 10px; /* Bords arrondis */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre portée subtile */
-}
-
-.event-week h3 {
-    color: #333; /* Couleur du titre */
-    margin-bottom: 10px; /* Espacement sous le titre */
-}
-
-@media (max-width: 768px) {
-    .content-container {
-        flex-direction: column;
-    }
-
-    .carousel-container, .event-week {
-        flex: none; /* Annuler la règle flex de 1 sur les petits écrans */
-        width: 100%; /* Prendre toute la largeur disponible */
-        margin: 10px 0; /* Espacement vertical seulement */
-    }
-}
-

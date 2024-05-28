@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Omnes Immobilier est votre partenaire de confiance pour trouver des biens immobiliers. Consultez notre large gamme de propriétés et prenez rendez-vous en ligne.">
     <title>Omnes Immobilier</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="wrapper">
         <header>
-            <img src="images/logo.png" alt="Logo Omnes Immobilier" id="logo">
-            <h1>Omnes Immobilier</h1>
-        </header>        
-        <nav>
+            <h1><img src="images/logo.png" alt="Logo Omnes Immobilier" id="logo">Omnes Immobilier</h1>
+        </header>
+        <nav aria-label="Menu principal">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="parcourir.html">Tout Parcourir</a></li>
-                <li><a href="#search">Recherche</a></li>
-                <li><a href="#appointments">Rendez-vous</a></li>
-                <li><a href="#account">Votre Compte</a></li>
+                <li><a href="recherche.html">Recherche</a></li>
+                <li><a href="rdv.html">Rendez-vous</a></li>
+                <li><a href="compte.html">Votre Compte</a></li>
             </ul>
         </nav>
-        <section id="home">
+        <main>
             <section id="home">
                 <h2>Bienvenue sur Omnes Immobilier</h2>
                 <div class="agency-description">
                     <h3>À propos de l'agence</h3>
                     <p>
-                        Fondée en 2024, Omnes Immobilier est le fruit de la collaboration entre quatre passionnés du secteur immobilier : Quentin, Antoine, Amine et Badr. Notre agence s'engage à offrir des services immobiliers de qualité supérieure, en mettant à disposition de nos clients une expertise reconnue et un accompagnement personnalisé dans la recherche de leur bien idéal.
+                        Fondée en 2024, Omnes Immobilier est dirigée par une équipe passionnée du secteur immobilier. Découvrez nos services immobiliers de qualité supérieure, disponibles pour vous aider à trouver votre bien idéal.
                     </p>
                 </div>
-                <div class="carousel">
+                <div class="carousel" aria-label="Galerie de propriétés">
                     <div class="slides">
-                        <img src="images/photo1.jpg" alt="Photo 1">
-                        <img src="images/photo2.jpg" alt="Photo 2">
-                        <img src="images/photo3.jpg" alt="Photo 3">
-                        <img src="images/photo4.jpg" alt="Photo 4">
-                        <img src="images/photo5.jpg" alt="Photo 5">
+                        <img src="images/photo1.jpg" alt="Vue extérieure d'une maison moderne">
+                        <img src="images/photo2.jpg" alt="Intérieur lumineux et spacieux d'un appartement">
+                        <img src="images/photo3.jpg" alt="Jardin bien entretenu d'une propriété à vendre">
+                        <img src="images/photo4.jpg" alt="Cuisine moderne avec équipements haut de gamme">
+                        <img src="images/photo5.jpg" alt="Façade d'une maison de ville classique">
                     </div>
-                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                    <button class="prev" onclick="moveSlide(-1)" aria-label="Image précédente">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)" aria-label="Image suivante">&#10095;</button>
                 </div>
                 <div class="event-week">
                     <h3>Événement de la Semaine</h3>
@@ -50,9 +50,9 @@
                     <p>Joignez-vous à nous pour une journée porte ouverte! Rencontrez nos agents et découvrez nos nouvelles propriétés.</p>
                 </div>
             </section>           
-        </section>
+        </main>
         <footer>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.3724386130166!2d2.2859626753287254!3d48.85110800122049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b486bb253%3A0x61e9cc6979f93fae!2s10%20Rue%20Sextius%20Michel%2C%2075015%20Paris!5e0!3m2!1sfr!2sfr!4v1716818277910!5m2!1sfr!2sfr" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.3724386130166!2d2.2859626753287254!3d48.85110800122049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b486bb253%3A0x61e9cc6979f93fae!2s10%20Rue%20Sextius%20Michel%2C%2075015%20Paris!5e0!3m2!1sfr!2sfr!4v1716818277910!5m2!1sfr!2sfr" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation de Omnes Immobilier sur Google Maps"></iframe>
             <p>© 2024 Omnes Immobilier. Tous droits réservés.</p>
         </footer>
     </div>

@@ -1,5 +1,38 @@
-<!-- Formulaire de recherche -->
-<form action="search_results.php" method="GET">
-    <input type="text" name="search_query" placeholder="Rechercher un agent ou une propriété...">
-    <input type="submit" value="Rechercher">
-</form>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche - Omnes Immobilier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="images/logo.png" alt="Logo Omnes Immobilier" id="logo">
+            <h1>Omnes Immobilier - Recherche</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcourir.html">Tout Parcourir</a></li>
+                <li><a href="recherche.html">Recherche</a></li>
+                <li><a href="rdv.html">Rendez-vous</a></li>
+                <li><a href="compte.html">Votre Compte</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="search">
+                <h2>Rechercher une propriété ou un agent</h2>
+                <form action="Recherche.php" method="GET">
+                    <input type="text" name="search_query" placeholder="Rechercher un agent ou une propriété..." aria-label="Rechercher">
+                    <input type="submit" value="Rechercher">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 Omnes Immobilier. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>
