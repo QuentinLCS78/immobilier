@@ -2,6 +2,7 @@
 // search_results.php
 include 'database.php';
 
+
 $search_query = $_GET['search_query'];
 
 $query = "SELECT * FROM properties WHERE name LIKE ? OR address LIKE ?";

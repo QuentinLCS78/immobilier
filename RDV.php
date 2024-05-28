@@ -1,3 +1,4 @@
+
 <?php
 // submit_appointment.php
 include 'database.php';  // Assurez-vous d'avoir un script de connexion à la base de données
